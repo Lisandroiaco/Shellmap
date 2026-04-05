@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --surface: #f7f6f3;
+  --ink: #141312;
+  --accent: #0b0b0b;
+  --panel: #ffffff;
+  --panel-elev: #ffffff;
+  --panel-elev-muted: #f6f5f2;
+  --panel-border: rgba(0, 0, 0, 0.1);
+  --panel-text: #141312;
+  --panel-text-muted: rgba(20, 19, 18, 0.6);
+  --panel-strong: #0b0b0b;
+  --panel-strong-text: #ffffff;
+  --panel-hover: rgba(0, 0, 0, 0.06);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --surface: #121212;
+    --ink: #f5f5f5;
+    --accent: #ffffff;
+    --panel: #131313;
+    --panel-elev: #151515;
+    --panel-elev-muted: #1b1b1b;
+    --panel-border: rgba(255, 255, 255, 0.08);
+    --panel-text: #f5f5f5;
+    --panel-text-muted: rgba(245, 245, 245, 0.6);
+    --panel-strong: #ffffff;
+    --panel-strong-text: #0b0b0b;
+    --panel-hover: rgba(255, 255, 255, 0.08);
+  }
+}
+
+html[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --surface: #121212;
+  --ink: #f5f5f5;
+  --accent: #ffffff;
+  --panel: #131313;
+  --panel-elev: #151515;
+  --panel-elev-muted: #1b1b1b;
+  --panel-border: rgba(255, 255, 255, 0.08);
+  --panel-text: #f5f5f5;
+  --panel-text-muted: rgba(245, 245, 245, 0.6);
+  --panel-strong: #ffffff;
+  --panel-strong-text: #0b0b0b;
+  --panel-hover: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --surface: #f7f6f3;
+  --ink: #141312;
+  --accent: #0b0b0b;
+  --panel: #ffffff;
+  --panel-elev: #ffffff;
+  --panel-elev-muted: #f6f5f2;
+  --panel-border: rgba(0, 0, 0, 0.1);
+  --panel-text: #141312;
+  --panel-text-muted: rgba(20, 19, 18, 0.6);
+  --panel-strong: #0b0b0b;
+  --panel-strong-text: #ffffff;
+  --panel-hover: rgba(0, 0, 0, 0.06);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #ffe68a;
+  color: #1a1a1a;
+}
+
+:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
